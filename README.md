@@ -174,6 +174,29 @@ query {
 
 http://localhost:4000/graphql
 
+## Query to fetch all games
+
+- In the RootQuery, add a new field (query) to fetch all games, like this:
+
+```javascript
+games: {
+      type: new GraphQLList(GameType),
+      resolve(parent, args) {
+        return gameData;
+      },
+    },
+```
+
+http://localhost:4000/graphql
+
+```
+query {
+  games{
+    name
+  }
+}
+```
+
 ## Add Mutation to add a Game
 
 ```javascript
