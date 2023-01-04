@@ -110,12 +110,6 @@ const RootQuery = new GraphQLObjectType({
         return _.find(scoreData, { id: args.id });
       },
     },
-    // userScores: {
-    //   type: new GraphQLList(UserScoreType),
-    //   resolve(parent, args) {
-    //     return userScoreData;
-    //   },
-    // },
   },
 });
 
